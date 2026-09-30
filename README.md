@@ -9,6 +9,14 @@ npm run build      # 타입 체크 + 빌드 (dist/)
 SINGLE=1 npx vite build   # JS/CSS가 모두 인라인된 index.html 한 장 (공유·태블릿 오프라인용)
 ```
 
+## 배포 (GitHub Pages)
+
+`main` 브랜치에 push하면 `.github/workflows/deploy.yml`이 빌드 후 GitHub Pages에 자동 배포합니다.
+
+- 최초 1회: 저장소 **Settings → Pages → Source**를 **GitHub Actions**로 설정
+- 주소: https://chancesu.github.io/toktok-wordcards/
+- 수동 재배포: Actions 탭 → Deploy to GitHub Pages → Run workflow
+
 ## 플로우 (src/machine.ts)
 
 ```
