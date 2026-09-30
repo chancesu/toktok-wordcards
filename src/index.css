@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 아이용 한 화면 앱: 스크롤·확대·텍스트 선택·탭 하이라이트를 모두 끈다 */
+html,
+body,
+#root {
+  height: 100%;
+}
+html {
+  color-scheme: light;
+  overscroll-behavior: none;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #bfddff;
+  color: #24315e;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+.app-surface {
+  background: linear-gradient(180deg, #a9d2ff 0%, #cfe6ff 55%, #e9f4ff 100%);
+  touch-action: none;
+}
+/* 보호자 화면의 입력칸은 선택·입력 가능 */
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-floaty,
+  .animate-jiggle,
+  .animate-drift,
+  .animate-twinkle,
+  .animate-nudge {
+    animation: none !important;
+  }
+}
